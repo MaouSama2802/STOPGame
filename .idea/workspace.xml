@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STOP Game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HelpFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LaunchGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main_Menu.java" afterDir="false" />
+    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="Gotta work on the main menu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "onboarding.tips.debug.path": "/Users/luisoscar2802/IdeaProjects/STOP Game/src/Main.java",
-    "settings.editor.selected.configurable": "Errors"
+    "settings.editor.selected.configurable": "preferences.customizations"
   }
 }]]></component>
   <component name="RunManager">
@@ -69,7 +60,39 @@
       <option name="presentableId" value="Default" />
       <updated>1689877035744</updated>
     </task>
+    <task id="LOCAL-00001" summary="Gotta work on the main menu">
+      <option name="closed" value="true" />
+      <created>1690138317383</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690138317383</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Gotta work on the main menu">
+      <option name="closed" value="true" />
+      <created>1690138677315</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690138677315</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gotta work on the main menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gotta work on the main menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
