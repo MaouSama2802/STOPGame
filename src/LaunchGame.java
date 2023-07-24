@@ -385,7 +385,6 @@ public class LaunchGame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setLayout(null);
-        //this.pack();
         this.setSize(500,500);
         this.setTitle("STOP");
         this.setVisible(true);
@@ -414,16 +413,18 @@ public class LaunchGame extends JFrame implements ActionListener {
                 secondsString = String.format("%02d", seconds);
                 millisecondsString = String.format("%03d", milliseconds);
                 timeLabel.setText("Timer " + secondsString + ":" + millisecondsString);
-                if (seconds == 30 ) {
+                if (seconds == 2 || actualRound==totalRounds+1) {
                     ((Timer) e.getSource()).stop();
                     elapsedTime=0;
                     seconds=0;
                     milliseconds=0;
                     iconGoWidth = 630;
                     iconGoHeight = 750;
+                    if(actualRound!=totalRounds+1){
                     Image scaledImage = iconStop.getImage().getScaledInstance(iconStopWidth, iconStopHeight, Image.SCALE_SMOOTH);
                     ImageIcon scaledIcon = new ImageIcon(scaledImage);
                     iconLabel.setIcon(scaledIcon);
+                    }
                     timeLabel.setForeground(new Color(204,0,0));
 
                     nameField.setEditable(false);

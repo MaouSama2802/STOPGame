@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="Gotta work on the main menu">
+    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="the main menu icon won't work...gotta work on that">
+      <change afterPath="$PROJECT_DIR$/src/ScoresFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player's Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Player's Scores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HelpFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LaunchGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LaunchGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690138677315</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="the main menu icon won't work...gotta work on that">
+      <option name="closed" value="true" />
+      <created>1690139756095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690139756095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,7 +106,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gotta work on the main menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gotta work on the main menu" />
+    <MESSAGE value="the main menu icon won't work...gotta work on that" />
+    <option name="LAST_COMMIT_MESSAGE" value="the main menu icon won't work...gotta work on that" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
