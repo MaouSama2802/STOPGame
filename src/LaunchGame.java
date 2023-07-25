@@ -524,30 +524,55 @@ public class LaunchGame extends JFrame implements ActionListener {
                     new Main_Menu();
                 }
             }
-            if(actualRound==1) {
+            if(actualRound==1 || actualRound==2) {
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(nameField.getText());
+                if(tempScore==userScore && actualRound==1)nameField.setBackground(Color.white);
+                else if(tempScore<userScore)nameField.setBackground(Color.green);
+                else nameField.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
             }
             if(actualRound==6){
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(nameField5.getText());
+                if(tempScore==userScore && actualRound==1)nameField5.setBackground(Color.white);
+                else if(tempScore<userScore)nameField5.setBackground(Color.green);
+                else nameField5.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 nameField5.setEditable(false);
             }
             if(actualRound==5){
+                int tempScore;
+                tempScore=userScore;
                 nameField4.setEditable(false);
                 correctAnswer(nameField4.getText());
+                if(tempScore==userScore && actualRound==1)nameField4.setBackground(Color.white);
+                else if(tempScore<userScore)nameField4.setBackground(Color.green);
+                else nameField4.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 nameField5.setEditable(true);
             }
             if(actualRound==4) {
+                int tempScore;
+                tempScore=userScore;
                 nameField3.setEditable(false);
                 correctAnswer(nameField3.getText());
+                if(tempScore==userScore && actualRound==1)nameField3.setBackground(Color.white);
+                else if(tempScore<userScore)nameField3.setBackground(Color.green);
+                else nameField3.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 nameField4.setEditable(true);
             }
             if(actualRound==3) {
+                int tempScore;
+                tempScore=userScore;
                 nameField2.setEditable(false);
                 correctAnswer(nameField2.getText());
+                if(tempScore==userScore && actualRound==1)nameField2.setBackground(Color.white);
+                else if(tempScore<userScore)nameField2.setBackground(Color.green);
+                else nameField2.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 nameField3.setEditable(true);
             }
@@ -555,30 +580,55 @@ public class LaunchGame extends JFrame implements ActionListener {
                 nameField.setEditable(false);
                 nameField2.setEditable(true);
             }
-            if(actualRound==1) {
+            if(actualRound==1 || actualRound==2) {
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(countryField.getText());
+                if(tempScore==userScore && actualRound==1)countryField.setBackground(Color.white);
+                else if(tempScore<userScore)countryField.setBackground(Color.green);
+                else countryField.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
             }
             if(actualRound==6){
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(countryField5.getText());
+                if(tempScore==userScore && actualRound==1)countryField5.setBackground(Color.white);
+                else if(tempScore<userScore)countryField5.setBackground(Color.green);
+                else countryField5.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 countryField5.setEditable(false);
             }
             if(actualRound==5){
+                int tempScore;
+                tempScore=userScore;
                 countryField4.setEditable(false);
                 correctAnswer(countryField4.getText());
+                if(tempScore==userScore && actualRound==1)countryField4.setBackground(Color.white);
+                else if(tempScore<userScore)countryField4.setBackground(Color.green);
+                else countryField4.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 countryField5.setEditable(true);
             }
             if(actualRound==4) {
+                int tempScore;
+                tempScore=userScore;
                 countryField3.setEditable(false);
                 correctAnswer(countryField3.getText());
+                if(tempScore==userScore && actualRound==1)countryField3.setBackground(Color.white);
+                else if(tempScore<userScore)countryField3.setBackground(Color.green);
+                else countryField3.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 countryField4.setEditable(true);
             }
             if(actualRound==3) {
+                int tempScore;
+                tempScore=userScore;
                 countryField2.setEditable(false);
                 correctAnswer(countryField2.getText());
+                if(tempScore==userScore && actualRound==1)countryField2.setBackground(Color.white);
+                else if(tempScore<userScore)countryField2.setBackground(Color.green);
+                else countryField2.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 countryField3.setEditable(true);
             }
@@ -586,30 +636,55 @@ public class LaunchGame extends JFrame implements ActionListener {
                 countryField2.setEditable(true);
                 countryField.setEditable(false);
             }
-            if(actualRound==1) {
+            if(actualRound==1 || actualRound==2) {
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(fruitField.getText());
+                if(tempScore==userScore && actualRound==1)fruitField.setBackground(Color.white);
+                else if(tempScore<userScore)fruitField.setBackground(Color.green);
+                else fruitField.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
             }
             if(actualRound==6){
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(fruitField5.getText());
+                if(tempScore==userScore && actualRound==1)fruitField5.setBackground(Color.white);
+                else if(tempScore<userScore)fruitField5.setBackground(Color.green);
+                else fruitField5.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 fruitField5.setEditable(false);
             }
             if(actualRound==5){
+                int tempScore;
+                tempScore=userScore;
                 fruitField4.setEditable(false);
                 correctAnswer(fruitField4.getText());
+                if(tempScore==userScore && actualRound==1)fruitField4.setBackground(Color.white);
+                else if(tempScore<userScore)fruitField4.setBackground(Color.green);
+                else fruitField4.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 fruitField5.setEditable(true);
             }
             if(actualRound==4) {
+                int tempScore;
+                tempScore=userScore;
                 fruitField3.setEditable(false);
                 correctAnswer(fruitField3.getText());
+                if(tempScore==userScore && actualRound==1)fruitField3.setBackground(Color.white);
+                else if(tempScore<userScore)fruitField3.setBackground(Color.green);
+                else fruitField3.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 fruitField4.setEditable(true);
             }
             if(actualRound==3) {
+                int tempScore;
+                tempScore=userScore;
                 fruitField2.setEditable(false);
                 correctAnswer(fruitField2.getText());
+                if(tempScore==userScore && actualRound==1)fruitField2.setBackground(Color.white);
+                else if(tempScore<userScore)fruitField2.setBackground(Color.green);
+                else fruitField2.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 fruitField3.setEditable(true);
             }
@@ -617,30 +692,55 @@ public class LaunchGame extends JFrame implements ActionListener {
                 fruitField2.setEditable(true);
                 fruitField.setEditable(false);
             }
-            if(actualRound==1) {
+            if(actualRound==1 || actualRound==2) {
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(animalField.getText());
+                if(tempScore==userScore && actualRound==1)animalField.setBackground(Color.white);
+                else if(tempScore<userScore)animalField.setBackground(Color.green);
+                else animalField.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
             }
             if(actualRound==6){
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(animalField5.getText());
+                if(tempScore==userScore && actualRound==1)animalField5.setBackground(Color.white);
+                else if(tempScore<userScore)animalField5.setBackground(Color.green);
+                else animalField5.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 animalField5.setEditable(false);
             }
             if(actualRound==5){
+                int tempScore;
+                tempScore=userScore;
                 animalField4.setEditable(false);
                 correctAnswer(animalField4.getText());
+                if(tempScore==userScore && actualRound==1)animalField4.setBackground(Color.white);
+                else if(tempScore<userScore)animalField4.setBackground(Color.green);
+                else animalField4.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 animalField5.setEditable(true);
             }
             if(actualRound==4) {
+                int tempScore;
+                tempScore=userScore;
                 animalField3.setEditable(false);
                 correctAnswer(animalField3.getText());
+                if(tempScore==userScore && actualRound==1)animalField3.setBackground(Color.white);
+                else if(tempScore<userScore)animalField3.setBackground(Color.green);
+                else animalField3.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 animalField4.setEditable(true);
             }
             if(actualRound==3) {
+                int tempScore;
+                tempScore=userScore;
                 animalField2.setEditable(false);
                 correctAnswer(animalField2.getText());
+                if(tempScore==userScore && actualRound==1)animalField2.setBackground(Color.white);
+                else if(tempScore<userScore)animalField2.setBackground(Color.green);
+                else animalField2.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 animalField3.setEditable(true);
             }
@@ -648,30 +748,55 @@ public class LaunchGame extends JFrame implements ActionListener {
                 animalField2.setEditable(true);
                 animalField.setEditable(false);
             }
-            if(actualRound==1) {
+            if(actualRound==1 || actualRound==2) {
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(colorField.getText());
+                if(tempScore==userScore && actualRound==1)colorField.setBackground(Color.white);
+                else if(tempScore<userScore)colorField.setBackground(Color.green);
+                else colorField.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
             }
             if(actualRound==6){
+                int tempScore;
+                tempScore=userScore;
                 correctAnswer(colorField5.getText());
+                if(tempScore==userScore && actualRound==1)colorField5.setBackground(Color.white);
+                else if(tempScore<userScore)colorField5.setBackground(Color.green);
+                else colorField5.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 colorField5.setEditable(false);
             }
             if(actualRound==5){
+                int tempScore;
+                tempScore=userScore;
                 colorField4.setEditable(false);
                 correctAnswer(colorField4.getText());
+                if(tempScore==userScore && actualRound==1)colorField4.setBackground(Color.white);
+                else if(tempScore<userScore)colorField4.setBackground(Color.green);
+                else colorField4.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 colorField5.setEditable(true);
             }
             if(actualRound==4) {
+                int tempScore;
+                tempScore=userScore;
                 colorField3.setEditable(false);
                 correctAnswer(colorField3.getText());
+                if(tempScore==userScore && actualRound==1)colorField3.setBackground(Color.white);
+                else if(tempScore<userScore)colorField3.setBackground(Color.green);
+                else colorField3.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 colorField4.setEditable(true);
             }
             if(actualRound==3) {
+                int tempScore;
+                tempScore=userScore;
                 colorField2.setEditable(false);
                 correctAnswer(colorField2.getText());
+                if(tempScore==userScore && actualRound==1)colorField2.setBackground(Color.white);
+                else if(tempScore<userScore)colorField2.setBackground(Color.green);
+                else colorField2.setBackground(Color.red);
                 userScoreField.setText("Score: " + userScore);
                 colorField3.setEditable(true);
             }

@@ -3,3 +3,7 @@ Player: lily scored 0 points.
 Player: Ma y Oscar scored 100 points.
 Player: Luis scored 50 points.
 Player: yay scored 0 points.
+Player: Oscar scored 110 points.
+Player: Your Name scored 0 points.
+Player: 1 scored 40 points.
+Player: 2 scored 20 points.

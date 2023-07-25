@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="added an scores frame with a jScrollPane">
+    <list default="true" id="21f0ec83-96c0-4aae-9577-546e3b5040cf" name="Changes" comment="fixed an issue with the timer increasing its speed every round">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player's Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Player's Scores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LaunchGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LaunchGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ScoresFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScoresFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690242654478</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed an issue with the timer increasing its speed every round">
+      <option name="closed" value="true" />
+      <created>1690246213164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690246213164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +123,8 @@
     <MESSAGE value="Gotta work on the main menu" />
     <MESSAGE value="the main menu icon won't work...gotta work on that" />
     <MESSAGE value="added an scores frame with a jScrollPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="added an scores frame with a jScrollPane" />
+    <MESSAGE value="fixed an issue with the timer increasing its speed every round" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed an issue with the timer increasing its speed every round" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
