@@ -7,3 +7,8 @@ Player: Oscar scored 110 points.
 Player: Your Name scored 0 points.
 Player: 1 scored 40 points.
 Player: 2 scored 20 points.
+Player: Luis Oscar scored 40 points.
+Player: Random user scored 0 points.
+Player: pedro123 scored 130 points.
+Player: Luis1234 scored 140 points.
+Player: Tati<3 scored 210 points.
