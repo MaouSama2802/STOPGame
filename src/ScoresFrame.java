@@ -12,7 +12,9 @@ public class ScoresFrame extends JFrame implements ActionListener {
     JTextArea textArea = new JTextArea();
 
     ScoresFrame() {
+        textArea.setEditable(false);
         textArea.setFont(new Font("Verdana", Font.PLAIN, 24));
+        textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
         scrollPane.setBounds(460, 60, 530, 520);
         try {

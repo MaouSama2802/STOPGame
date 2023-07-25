@@ -13,7 +13,7 @@ public class LaunchGame extends JFrame implements ActionListener {
     String[] categoryFruit = {"Apple", "Banana", "Cherry", "Dragonfruit", "Elderberry", "Fig", "Grape", "Honeydew Melon", "Indian Gooseberry", "Jackfruit", "Kiwi", "Lemon", "Mango", "Nectarine", "Orange", "Papaya", "Quince", "Raspberry", "Strawberry", "Tomato", "Ugli Fruit", "Valencia Orange", "Watermelon", "Xigua", "Yellow", "Watermelon", "Zucchini"};
     String[] categoryAnimal = {"Ant", "Bear", "Cat", "Dog", "Elephant", "Fox", "Giraffe", "Horse", "Impala", "Jaguar", "Kangaroo", "Lion", "Monkey", "Newt", "Octopus", "Penguin", "Quokka", "Rabbit", "Snake", "Tiger", "Uakari", "Vulture", "Wolf", "Xray", "Yak", "Zebra"};
     String[] categoryColor = {"Amaranth", "Blue", "Black", "Brown", "Crimson", "Dark Green", "Emerald Green", "Fuchsia", "Green", "Honeydew", "Indigo", "Jade", "Khaki", "Lavender", "Magenta", "Navy Blue", "Orange", "Pink", "Quartz", "Red", "Sapphire", "Turquoise", "Ultramarine", "Violet", "White", "Xanadu", "Yellow", "Zaffre" };
-
+    Timer timer;
     int actualRound = 0;
     int totalRounds = 5;
     char currentLetter;
@@ -89,6 +89,62 @@ public class LaunchGame extends JFrame implements ActionListener {
     JTextField colorField5 = new JTextField();
 
     LaunchGame() {
+        timer = new Timer(1, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                elapsedTime += 1;
+                seconds = elapsedTime / 1000 ;
+                milliseconds = elapsedTime % 1000;
+                secondsString = String.format("%02d", seconds);
+                millisecondsString = String.format("%03d", milliseconds);
+                timeLabel.setText("Timer " + secondsString + ":" + millisecondsString);
+                if (seconds == 30 || actualRound==totalRounds+1) {
+                    ((Timer) e.getSource()).stop();
+                    elapsedTime=0;
+                    seconds=0;
+                    milliseconds=0;
+                    iconGoWidth = 630;
+                    iconGoHeight = 750;
+                    if(actualRound!=totalRounds+1){
+                        Image scaledImage = iconStop.getImage().getScaledInstance(iconStopWidth, iconStopHeight, Image.SCALE_SMOOTH);
+                        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+                        iconLabel.setIcon(scaledIcon);
+                    }
+                    timeLabel.setForeground(new Color(204,0,0));
+
+                    nameField.setEditable(false);
+                    nameField2.setEditable(false);
+                    nameField3.setEditable(false);
+                    nameField4.setEditable(false);
+                    nameField5.setEditable(false);
+
+                    countryField.setEditable(false);
+                    countryField2.setEditable(false);
+                    countryField3.setEditable(false);
+                    countryField4.setEditable(false);
+                    countryField5.setEditable(false);
+
+                    fruitField.setEditable(false);
+                    fruitField2.setEditable(false);
+                    fruitField3.setEditable(false);
+                    fruitField4.setEditable(false);
+                    fruitField5.setEditable(false);
+
+                    animalField.setEditable(false);
+                    animalField2.setEditable(false);
+                    animalField3.setEditable(false);
+                    animalField4.setEditable(false);
+                    animalField5.setEditable(false);
+
+                    colorField.setEditable(false);
+                    colorField2.setEditable(false);
+                    colorField3.setEditable(false);
+                    colorField4.setEditable(false);
+                    colorField5.setEditable(false);
+                }
+            }
+        });
         timeLabel.setBounds(700, 10, 400, 80);
         timeLabel.setOpaque(true);
         timeLabel.setForeground(Color.green);
@@ -403,62 +459,7 @@ public class LaunchGame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Timer timer = new Timer(1, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-                elapsedTime += 1;
-                seconds = elapsedTime / 1000 ;
-                milliseconds = elapsedTime % 1000;
-                secondsString = String.format("%02d", seconds);
-                millisecondsString = String.format("%03d", milliseconds);
-                timeLabel.setText("Timer " + secondsString + ":" + millisecondsString);
-                if (seconds == 2 || actualRound==totalRounds+1) {
-                    ((Timer) e.getSource()).stop();
-                    elapsedTime=0;
-                    seconds=0;
-                    milliseconds=0;
-                    iconGoWidth = 630;
-                    iconGoHeight = 750;
-                    if(actualRound!=totalRounds+1){
-                    Image scaledImage = iconStop.getImage().getScaledInstance(iconStopWidth, iconStopHeight, Image.SCALE_SMOOTH);
-                    ImageIcon scaledIcon = new ImageIcon(scaledImage);
-                    iconLabel.setIcon(scaledIcon);
-                    }
-                    timeLabel.setForeground(new Color(204,0,0));
-
-                    nameField.setEditable(false);
-                    nameField2.setEditable(false);
-                    nameField3.setEditable(false);
-                    nameField4.setEditable(false);
-                    nameField5.setEditable(false);
-
-                    countryField.setEditable(false);
-                    countryField2.setEditable(false);
-                    countryField3.setEditable(false);
-                    countryField4.setEditable(false);
-                    countryField5.setEditable(false);
-
-                    fruitField.setEditable(false);
-                    fruitField2.setEditable(false);
-                    fruitField3.setEditable(false);
-                    fruitField4.setEditable(false);
-                    fruitField5.setEditable(false);
-
-                    animalField.setEditable(false);
-                    animalField2.setEditable(false);
-                    animalField3.setEditable(false);
-                    animalField4.setEditable(false);
-                    animalField5.setEditable(false);
-
-                    colorField.setEditable(false);
-                    colorField2.setEditable(false);
-                    colorField3.setEditable(false);
-                    colorField4.setEditable(false);
-                    colorField5.setEditable(false);
-                }
-            }
-        });
         if(e.getSource()==saveScoreButton && actualRound==totalRounds+1){
             iconGoWidth = 270;
             iconGoHeight = 300;
@@ -482,203 +483,203 @@ public class LaunchGame extends JFrame implements ActionListener {
             this.dispose();
             new Main_Menu();
         }
-    if(e.getSource()==letterButton){
-        timeLabel.setForeground(Color.green);
-        iconStopWidth = 630;
-        iconStopHeight = 750;
-        Image goScaled = iconGo.getImage().getScaledInstance(iconStopWidth, iconStopHeight, Image.SCALE_SMOOTH);
-        ImageIcon goImage = new ImageIcon(goScaled);
-        iconLabel.setIcon(goImage);
-        letterButton.setText("Next Round");
-        nameField.setEditable(true);
-        countryField.setEditable(true);
-        fruitField.setEditable(true);
-        animalField.setEditable(true);
-        colorField.setEditable(true);
-        actualRound++;
-        elapsedTime=0;
-        seconds=0;
-        milliseconds=0;
-        timer.start();
-        if(actualRound==1){
-            generateRandomLetter();
-        }
-        timer.start();
-        if(actualRound==totalRounds+1){
-            iconThumbsWidth = 630;
-            iconThumbsHeight = 750;
-            Image another = iconThumbs.getImage().getScaledInstance(iconThumbsWidth, iconThumbsHeight, Image.SCALE_SMOOTH);
-            ImageIcon thumb = new ImageIcon(another);
-            iconLabel.setIcon(thumb);
+        if(e.getSource()==letterButton){
             timer.stop();
-            saveScoreButton.setVisible(true);
-            timeLabel.setVisible(false);
-            letterLabel.setVisible(false);
-            currentLetterLabel.setVisible(false);
-           letterButton.setText("Finish Game");
-        }
-        if(actualRound==totalRounds+2){
-            if(e.getSource()==letterButton){
-                this.dispose();
-                new Main_Menu();
+            timeLabel.setForeground(Color.green);
+            iconStopWidth = 630;
+            iconStopHeight = 750;
+            Image goScaled = iconGo.getImage().getScaledInstance(iconStopWidth, iconStopHeight, Image.SCALE_SMOOTH);
+            ImageIcon goImage = new ImageIcon(goScaled);
+            iconLabel.setIcon(goImage);
+            letterButton.setText("Next Round");
+            nameField.setEditable(true);
+            countryField.setEditable(true);
+            fruitField.setEditable(true);
+            animalField.setEditable(true);
+            colorField.setEditable(true);
+            actualRound++;
+            elapsedTime=0;
+            seconds=0;
+            milliseconds=0;
+            timer.start();
+            if(actualRound==1){
+                generateRandomLetter();
             }
-        }
-        if(nameField.isEditable()) {
-            correctAnswer(nameField.getText());
-            userScoreField.setText("Score: " + userScore);
-        }
-        if(actualRound==6){
-            correctAnswer(nameField5.getText());
-            userScoreField.setText("Score: " + userScore);
-            nameField5.setEditable(false);
-        }
-        if(actualRound==5){
-            nameField4.setEditable(false);
-            correctAnswer(nameField4.getText());
-            userScoreField.setText("Score: " + userScore);
-            nameField5.setEditable(true);
-        }
-        if(actualRound==4) {
-            nameField3.setEditable(false);
-            correctAnswer(nameField3.getText());
-            userScoreField.setText("Score: " + userScore);
-            nameField4.setEditable(true);
-        }
-        if(actualRound==3) {
-            nameField2.setEditable(false);
-            correctAnswer(nameField2.getText());
-            userScoreField.setText("Score: " + userScore);
-            nameField3.setEditable(true);
-        }
-        if(actualRound==2){
-            nameField.setEditable(false);
-            nameField2.setEditable(true);
-        }
-        if(countryField.isEditable()) {
-            correctAnswer(countryField.getText());
-            userScoreField.setText("Score: " + userScore);
-        }
-        if(actualRound==6){
-            correctAnswer(countryField5.getText());
-            userScoreField.setText("Score: " + userScore);
-            countryField5.setEditable(false);
-        }
-        if(actualRound==5){
-            countryField4.setEditable(false);
-            correctAnswer(countryField4.getText());
-            userScoreField.setText("Score: " + userScore);
-            countryField5.setEditable(true);
-        }
-        if(actualRound==4) {
-            countryField3.setEditable(false);
-            correctAnswer(countryField3.getText());
-            userScoreField.setText("Score: " + userScore);
-            countryField4.setEditable(true);
-        }
-        if(actualRound==3) {
-            countryField2.setEditable(false);
-            correctAnswer(countryField2.getText());
-            userScoreField.setText("Score: " + userScore);
-            countryField3.setEditable(true);
-        }
-        if(actualRound==2){
-            countryField2.setEditable(true);
-            countryField.setEditable(false);
-        }
-        if(fruitField.isEditable()) {
-            correctAnswer(fruitField.getText());
-            userScoreField.setText("Score: " + userScore);
-        }
-        if(actualRound==6){
-            correctAnswer(fruitField5.getText());
-            userScoreField.setText("Score: " + userScore);
-            fruitField5.setEditable(false);
-        }
-        if(actualRound==5){
-            fruitField4.setEditable(false);
-            correctAnswer(fruitField4.getText());
-            userScoreField.setText("Score: " + userScore);
-            fruitField5.setEditable(true);
-        }
-        if(actualRound==4) {
-            fruitField3.setEditable(false);
-            correctAnswer(fruitField3.getText());
-            userScoreField.setText("Score: " + userScore);
-            fruitField4.setEditable(true);
-        }
-        if(actualRound==3) {
-            fruitField2.setEditable(false);
-            correctAnswer(fruitField2.getText());
-            userScoreField.setText("Score: " + userScore);
-            fruitField3.setEditable(true);
-        }
-        if(actualRound==2){
-            fruitField2.setEditable(true);
-            fruitField.setEditable(false);
-        }
-        if(animalField.isEditable()) {
-            correctAnswer(animalField.getText());
-            userScoreField.setText("Score: " + userScore);
-        }
-        if(actualRound==6){
-            correctAnswer(animalField5.getText());
-            userScoreField.setText("Score: " + userScore);
-            animalField5.setEditable(false);
-        }
-        if(actualRound==5){
-            animalField4.setEditable(false);
-            correctAnswer(animalField4.getText());
-            userScoreField.setText("Score: " + userScore);
-            animalField5.setEditable(true);
-        }
-        if(actualRound==4) {
-            animalField3.setEditable(false);
-            correctAnswer(animalField3.getText());
-            userScoreField.setText("Score: " + userScore);
-            animalField4.setEditable(true);
-        }
-        if(actualRound==3) {
-            animalField2.setEditable(false);
-            correctAnswer(animalField2.getText());
-            userScoreField.setText("Score: " + userScore);
-            animalField3.setEditable(true);
-        }
-        if(actualRound==2){
-            animalField2.setEditable(true);
-            animalField.setEditable(false);
-        }
-        if(colorField.isEditable()) {
-            correctAnswer(colorField.getText());
-            userScoreField.setText("Score: " + userScore);
-        }
-        if(actualRound==6){
-            correctAnswer(colorField5.getText());
-            userScoreField.setText("Score: " + userScore);
-            colorField5.setEditable(false);
-        }
-        if(actualRound==5){
-            colorField4.setEditable(false);
-            correctAnswer(colorField4.getText());
-            userScoreField.setText("Score: " + userScore);
-            colorField5.setEditable(true);
-        }
-        if(actualRound==4) {
-            colorField3.setEditable(false);
-            correctAnswer(colorField3.getText());
-            userScoreField.setText("Score: " + userScore);
-            colorField4.setEditable(true);
-        }
-        if(actualRound==3) {
-            colorField2.setEditable(false);
-            correctAnswer(colorField2.getText());
-            userScoreField.setText("Score: " + userScore);
-            colorField3.setEditable(true);
-        }
-        if(actualRound==2){
-            colorField2.setEditable(true);
-            colorField.setEditable(false);
-        }
-        generateRandomLetter();
+            if(actualRound==totalRounds+1){
+                iconThumbsWidth = 630;
+                iconThumbsHeight = 750;
+                Image another = iconThumbs.getImage().getScaledInstance(iconThumbsWidth, iconThumbsHeight, Image.SCALE_SMOOTH);
+                ImageIcon thumb = new ImageIcon(another);
+                iconLabel.setIcon(thumb);
+                timer.stop();
+                saveScoreButton.setVisible(true);
+                timeLabel.setVisible(false);
+                letterLabel.setVisible(false);
+                currentLetterLabel.setVisible(false);
+                letterButton.setText("Finish Game");
+            }
+            if(actualRound==totalRounds+2){
+                if(e.getSource()==letterButton){
+                    this.dispose();
+                    new Main_Menu();
+                }
+            }
+            if(actualRound==1) {
+                correctAnswer(nameField.getText());
+                userScoreField.setText("Score: " + userScore);
+            }
+            if(actualRound==6){
+                correctAnswer(nameField5.getText());
+                userScoreField.setText("Score: " + userScore);
+                nameField5.setEditable(false);
+            }
+            if(actualRound==5){
+                nameField4.setEditable(false);
+                correctAnswer(nameField4.getText());
+                userScoreField.setText("Score: " + userScore);
+                nameField5.setEditable(true);
+            }
+            if(actualRound==4) {
+                nameField3.setEditable(false);
+                correctAnswer(nameField3.getText());
+                userScoreField.setText("Score: " + userScore);
+                nameField4.setEditable(true);
+            }
+            if(actualRound==3) {
+                nameField2.setEditable(false);
+                correctAnswer(nameField2.getText());
+                userScoreField.setText("Score: " + userScore);
+                nameField3.setEditable(true);
+            }
+            if(actualRound==2){
+                nameField.setEditable(false);
+                nameField2.setEditable(true);
+            }
+            if(actualRound==1) {
+                correctAnswer(countryField.getText());
+                userScoreField.setText("Score: " + userScore);
+            }
+            if(actualRound==6){
+                correctAnswer(countryField5.getText());
+                userScoreField.setText("Score: " + userScore);
+                countryField5.setEditable(false);
+            }
+            if(actualRound==5){
+                countryField4.setEditable(false);
+                correctAnswer(countryField4.getText());
+                userScoreField.setText("Score: " + userScore);
+                countryField5.setEditable(true);
+            }
+            if(actualRound==4) {
+                countryField3.setEditable(false);
+                correctAnswer(countryField3.getText());
+                userScoreField.setText("Score: " + userScore);
+                countryField4.setEditable(true);
+            }
+            if(actualRound==3) {
+                countryField2.setEditable(false);
+                correctAnswer(countryField2.getText());
+                userScoreField.setText("Score: " + userScore);
+                countryField3.setEditable(true);
+            }
+            if(actualRound==2){
+                countryField2.setEditable(true);
+                countryField.setEditable(false);
+            }
+            if(actualRound==1) {
+                correctAnswer(fruitField.getText());
+                userScoreField.setText("Score: " + userScore);
+            }
+            if(actualRound==6){
+                correctAnswer(fruitField5.getText());
+                userScoreField.setText("Score: " + userScore);
+                fruitField5.setEditable(false);
+            }
+            if(actualRound==5){
+                fruitField4.setEditable(false);
+                correctAnswer(fruitField4.getText());
+                userScoreField.setText("Score: " + userScore);
+                fruitField5.setEditable(true);
+            }
+            if(actualRound==4) {
+                fruitField3.setEditable(false);
+                correctAnswer(fruitField3.getText());
+                userScoreField.setText("Score: " + userScore);
+                fruitField4.setEditable(true);
+            }
+            if(actualRound==3) {
+                fruitField2.setEditable(false);
+                correctAnswer(fruitField2.getText());
+                userScoreField.setText("Score: " + userScore);
+                fruitField3.setEditable(true);
+            }
+            if(actualRound==2){
+                fruitField2.setEditable(true);
+                fruitField.setEditable(false);
+            }
+            if(actualRound==1) {
+                correctAnswer(animalField.getText());
+                userScoreField.setText("Score: " + userScore);
+            }
+            if(actualRound==6){
+                correctAnswer(animalField5.getText());
+                userScoreField.setText("Score: " + userScore);
+                animalField5.setEditable(false);
+            }
+            if(actualRound==5){
+                animalField4.setEditable(false);
+                correctAnswer(animalField4.getText());
+                userScoreField.setText("Score: " + userScore);
+                animalField5.setEditable(true);
+            }
+            if(actualRound==4) {
+                animalField3.setEditable(false);
+                correctAnswer(animalField3.getText());
+                userScoreField.setText("Score: " + userScore);
+                animalField4.setEditable(true);
+            }
+            if(actualRound==3) {
+                animalField2.setEditable(false);
+                correctAnswer(animalField2.getText());
+                userScoreField.setText("Score: " + userScore);
+                animalField3.setEditable(true);
+            }
+            if(actualRound==2){
+                animalField2.setEditable(true);
+                animalField.setEditable(false);
+            }
+            if(actualRound==1) {
+                correctAnswer(colorField.getText());
+                userScoreField.setText("Score: " + userScore);
+            }
+            if(actualRound==6){
+                correctAnswer(colorField5.getText());
+                userScoreField.setText("Score: " + userScore);
+                colorField5.setEditable(false);
+            }
+            if(actualRound==5){
+                colorField4.setEditable(false);
+                correctAnswer(colorField4.getText());
+                userScoreField.setText("Score: " + userScore);
+                colorField5.setEditable(true);
+            }
+            if(actualRound==4) {
+                colorField3.setEditable(false);
+                correctAnswer(colorField3.getText());
+                userScoreField.setText("Score: " + userScore);
+                colorField4.setEditable(true);
+            }
+            if(actualRound==3) {
+                colorField2.setEditable(false);
+                correctAnswer(colorField2.getText());
+                userScoreField.setText("Score: " + userScore);
+                colorField3.setEditable(true);
+            }
+            if(actualRound==2){
+                colorField2.setEditable(true);
+                colorField.setEditable(false);
+            }
+            generateRandomLetter();
         }
     }
 
