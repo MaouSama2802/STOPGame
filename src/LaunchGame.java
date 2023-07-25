@@ -14,6 +14,11 @@ public class LaunchGame extends JFrame implements ActionListener {
     String[] categoryAnimal = {"Peacock", "Polar Bear", "Eagle", "bat", "Deer", "Whale", "Ant", "Bear", "Cat", "Dog", "Elephant", "Fox", "Giraffe", "Horse", "Impala", "Jaguar", "Kangaroo", "Lion", "Monkey", "Newt", "Octopus", "Penguin", "Quokka", "Rabbit", "Snake", "Tiger", "Uakari", "Vulture", "Wolf", "Stingray", "Yak", "Zebra"};
     String[] categoryColor = {"Beige", "Amaranth", "Blue", "Black", "Brown", "Crimson", "Dark Green", "Emerald Green", "Fuchsia", "Green", "Honeydew", "Indigo", "Jade", "Khaki", "Lavender", "Magenta", "Navy Blue", "Orange", "Pink", "Quartz", "Red", "Sapphire", "Turquoise", "Ultramarine", "Violet", "White", "Xanadu", "Yellow", "Zaffre" };
     Timer timer;
+    char tempLetter =' ';
+    char tempLetter1 =' ';
+    char tempLetter2 =' ';
+    char tempLetter3 =' ';
+    char tempLetter4 =' ';
     int actualRound = 0;
     int totalRounds = 5;
     char currentLetter;
@@ -447,11 +452,39 @@ public class LaunchGame extends JFrame implements ActionListener {
 
     private void generateRandomLetter() {
         Random random = new Random();
-        char tempLetter;
-        tempLetter = currentLetter;
-        while (tempLetter==currentLetter){
+        if(actualRound==1) {
             currentLetter = (char) (random.nextInt(26) + 'A');
+            tempLetter = currentLetter;
         }
+        if(actualRound==2) {
+            currentLetter = (char) (random.nextInt(26) + 'A');
+            while (currentLetter==tempLetter){
+                currentLetter = (char) (random.nextInt(26) + 'A');
+            }
+            tempLetter1 = currentLetter;
+        }
+        if(actualRound==3) {
+            currentLetter = (char) (random.nextInt(26) + 'A');
+            while (currentLetter == tempLetter1 || currentLetter==tempLetter){
+                currentLetter = (char) (random.nextInt(26) + 'A');
+            }
+            tempLetter2 = currentLetter;
+        }
+        if(actualRound==4) {
+            currentLetter = (char) (random.nextInt(26) + 'A');
+            while (currentLetter==tempLetter2 || currentLetter==tempLetter1 || currentLetter==tempLetter){
+                currentLetter = (char) (random.nextInt(26) + 'A');
+            }
+            tempLetter3 = currentLetter;
+        }
+        if(actualRound==5) {
+            currentLetter = (char) (random.nextInt(26) + 'A');
+            while (currentLetter==tempLetter3 || currentLetter==tempLetter2 || currentLetter == tempLetter1 || currentLetter==tempLetter){
+                currentLetter = (char) (random.nextInt(26) + 'A');
+                tempLetter4 = currentLetter;
+            }
+        }
+        System.out.println(tempLetter+tempLetter1+tempLetter2+tempLetter3+tempLetter4);
         letterLabel.setText("Round's letter: ");
         currentLetterLabel.setText(String.valueOf(currentLetter));
         letterLabel.setForeground(Color.white);
@@ -505,9 +538,6 @@ public class LaunchGame extends JFrame implements ActionListener {
             seconds=0;
             milliseconds=0;
             timer.start();
-            if(actualRound==1){
-                generateRandomLetter();
-            }
             if(actualRound==totalRounds+1){
                 iconThumbsWidth = 630;
                 iconThumbsHeight = 750;
